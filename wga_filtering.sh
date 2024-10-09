@@ -1,12 +1,10 @@
 #!/bin/bash -l
-#SBATCH -A naiss2024-5-135
+#SBATCH -A <compute-project>
 #SBATCH -p core
 #SBATCH -n 1
 #SBATCH -t 2-00:00:00
 #SBATCH -J delta_filter
 #SBATCH -o delta_filter.log
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user milena.trabert@ebc.uu.se
 
 module load bioinfo-tools MUMmer/4.0.0rc1
 #nucmer -t 20 ref:path qry:path+
