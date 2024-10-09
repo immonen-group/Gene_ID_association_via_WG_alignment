@@ -1,12 +1,10 @@
 #!/bin/bash -l
-#SBATCH -A naiss2024-5-135
+#SBATCH -A <compute-project>
 #SBATCH -p core
 #SBATCH -n 20
 #SBATCH -t 10:00:00
 #SBATCH -J nucmer_maculatus_ENA_vs_HiC
 #SBATCH -o nucmer_maculatus_ENA_vs_HiC.log
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user milena.trabert@ebc.uu.se
 
 module load bioinfo-tools MUMmer/4.0.0rc1
 #nucmer -t 20 ref:path qry:path+ 
