@@ -11,13 +11,13 @@ Assoicate gene positions of two separate annotated assemblies of the same specie
 ### alignment
 make an alignment with nucmer using the script `cmac_wga.sh`, and then filter the alignent with `wga_filtering.sh`. This results then in an alignent file that shows the positions of the query regions and where they aligned to the reference. There are two alignment files, one for each input assembly where it was used as the query.
 
-### gene position transfer
+### gene position transfer with `gene_association.py`
 1. Find annotation positions (contig name and coordinates) of a list of all feature IDs of interest using the annotation files. This is done with the class implemented in `parse_gff.py`, where the IDs of all features of the class `Gene` are extracted.
 2. Read the alignment file into the `ContigAlignments` class, that contains the contig name of the query sequence as `name` and then a list of `Region` class instances that represent all aligned regions in `name`.
 3. Calculate the inferred coordinates of the genes from 1. using the alignment coordinates in 2. and get a list of inferred gene coordinates
 
 ### get ids of transferred gene positions
-Use bedtools to get overlaps between above inferred gene positions and gene positions in the original annotation. bedtools accepts *any overlap at all*, at least 1bp. If filtering by percent or length of overlap is desired then the output file can be filtered afterwards.
+Use bedtools to get overlaps between above inferred gene positions and gene positions in the original annotation. bedtools accepts *any overlap at all*, at least 1bp. If filtering by percent or length of overlap is desired then the output file can be filtered afterwards. The filenames here come from `gene_association.py`
 
 Use bedtools to get the overlapping positions. `mRNA` overlaps transcripts, but change for any feature of your choice. awk is used to get rid of useless information from the gff file.
 ```
