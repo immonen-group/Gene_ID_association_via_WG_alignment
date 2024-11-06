@@ -49,4 +49,4 @@ The output file at the end has these columns:
 5. If a gene ID from either annotation is missing from my file, then it does not overlap with any gene from the other annotation in the alignments.
 
 # infographic
-<img src="https://github.com/milena-t/Gene_position_association_via_WG_alignment/blob/main/ENA_HiC_gene_coordinate_association.png" alt="drawing" width="450"/>
+<img src="https://github.com/immonen-group/Gene_ID_association_via_WG_alignment/blob/main/ENA_HiC_gene_coordinate_association.png" alt="drawing" width="450"/>
