@@ -12,6 +12,7 @@ Assoicate gene positions of two separate annotated assemblies of the same specie
 make an alignment with nucmer using the script `cmac_wga.sh`, and then filter the alignent with `wga_filtering.sh`. This results then in an alignent file that shows the positions of the query regions and where they aligned to the reference. There are two alignment files, one for each input assembly where it was used as the query.
 
 ### gene position transfer with `gene_association.py`
+For more technical details see the comments in the python script directly.
 1. Find annotation positions (contig name and coordinates) of a list of all feature IDs of interest using the annotation files. This is done with the class implemented in `parse_gff.py`, where the IDs of all features of the class `Gene` are extracted.
 2. Read the alignment file into the `ContigAlignments` class, that contains the contig name of the query sequence as `name` and then a list of `Region` class instances that represent all aligned regions in `name`.
 3. Calculate the inferred coordinates of the genes from 1. using the alignment coordinates in 2. and get a list of inferred gene coordinates
