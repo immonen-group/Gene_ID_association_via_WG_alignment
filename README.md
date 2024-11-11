@@ -44,7 +44,7 @@ The output file at the end has these columns:
 
 1. There are some duplicate ENA gene IDs. This happens when the gene found a HiC partner for both ENA and HiC reference alignments, so it appears twice.
 2. If you check for overlap with transcripts and not genes, for example cmac_gs1_g9969 matches CALMACT00000001113 and CALMACT00000001114, which are transcripts of the same gene CALMACG00000000693.
-3. Sometimes an ENA-inferred position overlaps with two or more separate HiC genes (for example cmac_gs1_g2162), I just included all of these. It’s possible to filter them for largest overlap probably, but I don’t think that’s
+3. Sometimes an ENA-inferred position overlaps with two or more separate HiC genes (for example cmac_gs1_g2162), I just included all of these. It’s possible to filter them for largest overlap with the included inferred and actual coordinates.
 4. It says [picked_reason "no_overlap"] behind a HiC gene ID sometimes, and that is part of the functional annotation from the original HiC annotation file, it doesn’t have anything to do with gene overlap from my script. I don’t know what it means.
 5. If a gene ID from either annotation is missing from my file, then it does not overlap with any gene from the other annotation in the alignments.
 
